@@ -24,5 +24,8 @@
     "@types/react": "^17.0.16",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
+  },
+  "overrides": {
+    "postcss": "^8.5.24"
   }
 }
