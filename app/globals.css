@@ -1,0 +1,80 @@
+:root {
+    color-scheme: light;
+    --font-monogram: var(--font-playfair);
+    --font-display: var(--font-fraunces);
+    --font-sans: var(--font-fraunces);
+    --ink: #4b4651;
+    --ink-soft: color-mix(in srgb, var(--ink) 68%, transparent);
+    --line: color-mix(in srgb, var(--ink) 16%, transparent);
+    --lavender: #b9b2cb;
+    --blush: #faced2;
+    --mint: #cadfcf;
+    --rose: #ffa6b2;
+    --peach: #eeb18f;
+    --coral: #ef9794;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100dvh;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: var(--ink);
+    background-color: var(--lavender);
+    animation: tide 72s linear infinite;
+    font-variation-settings: 'SOFT' 40;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Hold each colour for ~10s, then cross-fade over ~2s. */
+@keyframes tide {
+    0%,
+    14% {
+        background-color: var(--lavender);
+    }
+
+    17%,
+    31% {
+        background-color: var(--blush);
+    }
+
+    34%,
+    48% {
+        background-color: var(--mint);
+    }
+
+    51%,
+    65% {
+        background-color: var(--rose);
+    }
+
+    68%,
+    82% {
+        background-color: var(--peach);
+    }
+
+    85%,
+    97% {
+        background-color: var(--coral);
+    }
+
+    100% {
+        background-color: var(--lavender);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+    }
+}
