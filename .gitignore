@@ -1,9 +1,7 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
 
 # testing
 /coverage
@@ -16,14 +14,22 @@
 /build
 
 # misc
-.idea
 .DS_Store
-.env*
+*.pem
+.idea
 
 # debug
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# TypeScript incremental cache
+# local env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
 *.tsbuildinfo
+next-env.d.ts
